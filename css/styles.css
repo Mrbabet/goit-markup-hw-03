@@ -110,6 +110,8 @@ body {
 }
 header {
   height: 72px;
+  border-bottom: 1px solid var(--cornflower, #e7e9fc);
+  background: var(--white, #fff);
 }
 header .container {
   height: 100%;
@@ -117,9 +119,9 @@ header .container {
   margin: 0 auto;
   align-items: center;
 }
-img {
+/* img {
   width: 100%;
-}
+} */
 
 .hero-button,
 .filter-button {
@@ -295,6 +297,8 @@ img {
 /* Portfolio */
 .filters {
   list-style: none;
+  display: flex;
+  gap: 24px;
 }
 .filters .filter-button {
   padding: 12px 24px;
@@ -309,4 +313,42 @@ img {
   background: var(--ocean, #404bbf);
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+}
+.projects {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+.projects > .container {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+
+  align-items: center;
+}
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 48px;
+  column-gap: 24px;
+}
+.projects-container > .project {
+  display: flex;
+  width: 360px;
+  padding-bottom: 32px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  flex-shrink: 0;
+  border: 1px solid var(--cornflower, #e7e9fc);
+  background: var(--white, #fff);
+}
+.projects-container > .project > .project-text {
+  display: flex;
+  padding: 0px 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
 }
