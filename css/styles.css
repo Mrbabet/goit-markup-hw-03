@@ -119,9 +119,9 @@ header .container {
   margin: 0 auto;
   align-items: center;
 }
-/* img {
+img {
   width: 100%;
-} */
+}
 
 .hero-button,
 .filter-button {
@@ -326,16 +326,18 @@ header .container {
   align-items: center;
 }
 .projects-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   row-gap: 48px;
   column-gap: 24px;
 }
+
 .projects-container > .project {
   display: flex;
   width: 360px;
   flex-direction: column;
+  flex-shrink: 0;
+  flex-basis: calc((100%-48px) / 3);
 }
 .projects-container > .project > .project-text {
   display: flex;
